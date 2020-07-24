@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+    {% block content %}
+        {% for Blog in obj %}
+            <div class="blog">
+                <div class="blog_title">{{ Blog.title }}</div>
+                <div class="blog_content"><h1>{{ Blog.content }}</h1></div>
+                <div class="details">
+                    <p class="author"><span>By: </span>{{ Blog.author.username }}</p>
+                    <p class="date"><span>Published At: </span> {{ Blog.date_posted }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endblock content %}
+
