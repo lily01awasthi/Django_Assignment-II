@@ -5,6 +5,8 @@ from django.db import models
 
 
 # Create your models here.
+from django.urls import reverse_lazy
+
 from user.models import User
 
 
@@ -16,3 +18,6 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.author.email
+
+    # def get_absolute_url(self):
+    #     return reverse_lazy('blog:blog_home',kwargs={'pk': self.pk})

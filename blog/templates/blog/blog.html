@@ -5,10 +5,11 @@
                 <div class="blog_title">{{ Blog.title }}</div>
                 <div class="blog_content"><h1>{{ Blog.content }}</h1></div>
                 <div class="details">
-                    <p class="author"><span>By: </span>{{ Blog.author.username }}</p>
+                    <p class="author"><span>By: </span>{{ Blog.author.first_name}}</p>
                     <p class="date"><span>Published At: </span> {{ Blog.date_posted }}</p>
                 </div>
             </div>
         {% endfor %}
+        <a href="{% url 'blogs:logout' %}">Logout</a>
     {% endblock content %}
 

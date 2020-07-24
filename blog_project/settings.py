@@ -128,3 +128,5 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL ='blogs:blog_home'
 
 AUTH_USER_MODEL = 'user.User'
+
+LOGOUT_REDIRECT_URL = 'blogs:login'

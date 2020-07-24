@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm
 
+from blog.models import Blog
 from user.models import User
 
 
@@ -13,4 +15,7 @@ class RegisterForm(UserCreationForm):
         model = User
         fields = ('first_name', 'last_name', 'email', 'password1', 'password2', )
 
-
+class BlogPost(ModelForm):
+    class Meta:
+        model = Blog
+        fields = ['title','content']
